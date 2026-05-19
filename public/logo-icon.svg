@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Energy Serv icon">
+  <defs>
+    <linearGradient id="es-grad" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="es-shine" x1="20" y1="12" x2="44" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#es-grad)"/>
+  <rect width="64" height="64" rx="14" fill="url(#es-shine)"/>
+  <!-- Hexagonal industrial frame -->
+  <path d="M32 14L44 21v14L32 42 20 35V21L32 14z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" fill="none" opacity="0.9"/>
+  <!-- Energy bolt -->
+  <path d="M34 20h-6l4 10h-5l9 14v-10h5l-4-10h5l-3-4z" fill="#fff"/>
+</svg>

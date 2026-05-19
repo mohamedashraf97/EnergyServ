@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Energy Serv — Corporate Portfolio Website
 
-## Getting Started
+Premium industrial corporate portfolio website for **Energy Serv**, Riyadh, Kingdom of Saudi Arabia.
 
-First, run the development server:
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion**
+- **Lucide React**
+
+## Features
+
+- 6 pages: Home, About, Services, Products, Projects, Contact
+- Responsive design with sticky navigation and mobile menu
+- Scroll animations, animated counters, and interactive filters
+- SEO metadata and Open Graph tags
+- Frontend-only contact form (no backend)
+- Industrial imagery via Unsplash
+
+## Prerequisites
+
+- Node.js 18.17 or later
+- npm 9+
+
+## Product catalog (WooCommerce import)
+
+Products are imported from [A ONE Resources](https://aoneresources.com/products/) via the public WooCommerce **Store API** (no API keys required):
+
+```
+GET https://aoneresources.com/wp-json/wc/store/v1/products
+```
+
+Data is saved to `src/data/products.json`. Refresh anytime:
+
+```bash
+npm run fetch:products
+```
+
+If the API is blocked, use the Playwright fallback:
+
+```bash
+npm install -D playwright
+npx playwright install chromium
+node scripts/scrape-products.mjs
+```
+
+## Installation
+
+```bash
+cd d:\EnergyServ
+npm install
+```
+
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Push the project to GitHub, GitLab, or Bitbucket.
+2. Sign in at [vercel.com](https://vercel.com) and click **Add New Project**.
+3. Import your repository.
+4. Vercel auto-detects Next.js — keep default settings:
+   - **Framework Preset:** Next.js
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `.next` (default)
+5. Click **Deploy**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy via Vercel CLI
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm i -g vercel
+vercel login
+vercel
+```
 
-## Deploy on Vercel
+Follow the prompts. For production:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+vercel --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Structure
+
+```
+src/
+├── app/              # Pages and layouts
+├── components/
+│   ├── contact/      # Contact form
+│   ├── home/         # Homepage sections
+│   ├── icons/        # Dynamic icon helper
+│   ├── layout/       # Header, footer, logo
+│   ├── motion/       # Framer Motion wrappers
+│   ├── products/     # Product catalog filter
+│   ├── projects/     # Projects gallery filter
+│   ├── sections/     # Shared sections
+│   ├── services/     # Services grid
+│   └── ui/           # Button, section heading
+└── lib/
+    ├── site.ts       # Content and configuration
+    └── utils.ts      # Tailwind class merge helper
+```
+
+## Company Information
+
+| Field | Value |
+|-------|-------|
+| Company | Energy Serv |
+| Location | Riyadh, Kingdom of Saudi Arabia |
+| Phone | +966 50 257 4196 |
+| CR | 7054254151 |
+
+## License
+
+Private — All rights reserved.
