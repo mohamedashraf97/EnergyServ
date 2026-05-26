@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --navy: #0a1628;
-  --navy-light: #132238;
-  --charcoal: #1e293b;
-  --slate: #64748b;
-  --metallic: #94a3b8;
-  --accent: #0ea5e9;
-  --accent-hover: #0284c7;
-  --accent-glow: rgba(14, 165, 233, 0.25);
-  --orange: #f97316;
+  --background: #f8faf5;
+  --foreground: #1a2e0d;
+  --navy: #1a2e0d;
+  --navy-light: #243d16;
+  --charcoal: #2a3d1e;
+  --slate: #5a6e4a;
+  --metallic: #8a9a7a;
+  --accent: #d4a017;
+  --accent-hover: #b8860b;
+  --accent-glow: rgba(212, 160, 23, 0.25);
+  --orange: #d4a017;
   --glass: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -47,22 +47,22 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 50%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #c9b896 50%, #d4a017 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #0284c7 100%);
+  background: linear-gradient(135deg, #d4a017 0%, #e8b817 50%, #b8860b 100%);
 }
 
 .hero-overlay {
   background: linear-gradient(
     180deg,
-    rgba(10, 22, 40, 0.75) 0%,
-    rgba(10, 22, 40, 0.85) 50%,
-    rgba(10, 22, 40, 0.95) 100%
+    rgba(26, 46, 13, 0.75) 0%,
+    rgba(26, 46, 13, 0.85) 50%,
+    rgba(26, 46, 13, 0.95) 100%
   );
 }
 
@@ -98,7 +98,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(14, 165, 233, 0.15) 50%,
+    rgba(212, 160, 23, 0.15) 50%,
     transparent 100%
   );
   background-size: 200% 100%;

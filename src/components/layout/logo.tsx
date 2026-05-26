@@ -13,11 +13,11 @@ export function Logo({ className, light = false, variant = "full" }: LogoProps) 
     return (
       <Link href="/" className={cn("group block", className)} aria-label="Energy Serv home">
         <Image
-          src="/logo-icon.svg"
+          src="/energy-serv-logo-transparent.png"
           alt="Energy Serv"
           width={40}
           height={40}
-          className="h-10 w-10 transition-transform duration-300 group-hover:scale-105"
+          className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105"
           priority
         />
       </Link>
@@ -25,13 +25,20 @@ export function Logo({ className, light = false, variant = "full" }: LogoProps) 
   }
 
   return (
-    <Link href="/" className={cn("group block", className)} aria-label="Energy Serv home">
+    <Link
+      href="/"
+      className={cn(
+        "group block rounded-lg bg-white px-3 py-1.5",
+        className
+      )}
+      aria-label="Energy Serv home"
+    >
       <Image
-        src={light ? "/logo-light.svg" : "/logo-dark.svg"}
+        src="/energy-serv-logo-transparent.png"
         alt="Energy Serv"
-        width={180}
-        height={40}
-        className="h-10 w-auto transition-opacity duration-300 group-hover:opacity-90"
+        width={220}
+        height={56}
+        className="h-14 w-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
         priority
       />
     </Link>

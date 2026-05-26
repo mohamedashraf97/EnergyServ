@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   icons: {
-    icon: "/logo-icon.svg",
-    apple: "/logo-icon.svg",
+    icon: "/energy-serv-logo-transparent.png",
+    apple: "/energy-serv-logo-transparent.png",
   },
 };
 
